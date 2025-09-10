@@ -121,6 +121,14 @@ jobs:
       with:
         swap-size-gb: 12
 
+    - name: Extract boot.zip for TB132FU
+      run: |
+         OUT_DIR="$GITHUB_WORKSPACE/fox_12.1/out/target/product/TB132FU"
+         mkdir -p "$OUT_DIR"
+         unzip -o "$GITHUB_WORKSPACE/fox_12.1/device/lenovo/TB132FU/boot.zip" -d "$OUT_DIR"
+      shell: bash
+
+
     - name: Building recovery
       run: |
         cd ${{ steps.pwd.outputs.workspace-folder }}/fox_${{ github.event.inputs.MANIFEST_BRANCH }}
