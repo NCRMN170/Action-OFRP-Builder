@@ -134,7 +134,7 @@ jobs:
 
      
 
-    - name: Building recovery
+    - name: Building recovery ve Dtb.img boot.img aktarımı
       run: |
         cd ${{ steps.pwd.outputs.workspace-folder }}/fox_${{ github.event.inputs.MANIFEST_BRANCH }}
         OUT_DIR="$GITHUB_WORKSPACE/workspace/fox_12.1/out/target/product/TB132FU"
