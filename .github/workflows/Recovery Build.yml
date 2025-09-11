@@ -126,7 +126,7 @@ jobs:
         rm -rf bootable/recovery/minui bootable/recovery/minuitwrp
         git clone --depth=1 --branch android-14.1 \
           https://github.com/TeamWin/android_bootable_recovery.git tmp_recovery
-        cp -r tmp_recovery/minui bootable/recovery/
+        #cp -r tmp_recovery/minui bootable/recovery/
         cp -r tmp_recovery/minuitwrp bootable/recovery/
         rm -rf tmp_recovery
       working-directory: ${{ steps.pwd.outputs.workspace-folder }}/fox_12.1
