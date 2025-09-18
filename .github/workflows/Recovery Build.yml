@@ -125,8 +125,8 @@ jobs:
       run: |
         rm -rf bootable/recovery/minuitwrp
         rm -rf bootable/recovery/minui
-        git clone --depth=1 --branch fox_14.1 \
-        https://gitlab.com/OrangeFox/bootable/Recovery.git tmp_recovery
+        git clone --depth=1 --branch android-14.1 \
+        https://github.com/TeamWin/android_bootable_recovery.git tmp_recovery
         
         cp -r tmp_recovery/minui bootable/recovery/
         cp -r tmp_recovery/minuitwrp bootable/recovery/
